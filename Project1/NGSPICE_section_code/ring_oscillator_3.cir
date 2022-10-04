@@ -1,0 +1,25 @@
+* run_inverter_nand
+.include inverter.cir
+.include nand.cir
+
+* subckt for ring_oscillator
+.subckt ring_oscillator_3 va in vdd vss
+
+* nand instance
+x0 va vb in mid vdd vss nand
+
+* inverter instance
+x1 in out vdd vss inverter tplv=65.1n tpwv=219.2n tnln=66.7n tnwm=69.4n tpotv=1.97n tnotv=1.87n
+x2 out out2 vdd vss inverter tplv=63.7n tpwv=219.1n tnln=72.0n tnwm=65.0n tpotv=1.91n tnotv=1.82n
+x3 out2 out3 vdd vss inverter tplv=60.9n tpwv=217.5n tnln=68.7n tnwm=65.6n tpotv=1.95n tnotv=1.88n
+X4 out3 out4 vdd vss inverter tplv=58.5n tpwv=216.2n tnln=70.6n tnwm=61.5n tpotv=1.94n tnotv=1.86n
+X5 out4 out5 vdd vss inverter tplv=68.9n tpwv=213.4n tnln=63.4n tnwm=60.2n tpotv=1.94n tnotv=1.82n
+X6 out5 out6 vdd vss inverter tplv=71.2n tpwv=218.7n tnln=62.3n tnwm=65.2n tpotv=1.95n tnotv=1.85n
+X7 out6 out7 vdd vss inverter tplv=68.1n tpwv=212.2n tnln=65.5n tnwm=66.8n tpotv=1.96n tnotv=1.83n
+X8 out7 out8 vdd vss inverter tplv=66.5n tpwv=212.1n tnln=61.9n tnwm=61.5n tpotv=1.96n tnotv=1.83n
+X9 out8 out9 vdd vss inverter tplv=64.5n tpwv=215.9n tnln=59.1n tnwm=60.5n tpotv=1.97n tnotv=1.88n
+X10 out9 out10 vdd vss inverter tplv=66.5n tpwv=213.3n tnln=61.6n tnwm=62.0n tpotv=1.95n tnotv=1.89n
+X11 out10 out11 vdd vss inverter tplv=71.0n tpwv=217.0n tnln=68.2n tnwm=61.8n tpotv=1.92n tnotv=1.83n
+X12 out11 vb vdd vss inverter tplv=65.4n tpwv=212.5n tnln=64.2n tnwm=67.3n tpotv=1.93n tnotv=1.86n
+
+.ends ring_oscillator_3
