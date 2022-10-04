@@ -1,0 +1,42 @@
+*include all oscillator 
+.include ring_oscillator_0.cir
+.include ring_oscillator_1.cir
+.include ring_oscillator_2.cir
+.include ring_oscillator_3.cir
+.include ring_oscillator_4.cir
+.include ring_oscillator_5.cir
+.include ring_oscillator_6.cir
+.include ring_oscillator_7.cir
+
+X0 enable out vdd vss ring_oscillator_0
+X1 enable out1 vdd vss ring_oscillator_1
+X2 enable out2 vdd vss ring_oscillator_2
+X3 enable out3 vdd vss ring_oscillator_3
+X4 enable out4 vdd vss ring_oscillator_4
+X5 enable out5 vdd vss ring_oscillator_5
+X6 enable out6 vdd vss ring_oscillator_6
+X7 enable out7 vdd vss ring_oscillator_7
+
+* supply for each gate (VDD, VCC)
+V0 vdd vss dc 1.0V
+V1 vss 0 0
+
+* voltage on the input (Enable signal) change to pulse later
+Vain enable 0 PULSE(0 1.2 0.5ns 0.05ns 0.05ns 2ns 3ns)
+
+* Time set (10ns)
+.tran 0.05ns 3ns
+
+* set temp
+.option TEMP=27
+
+* command is: source run_oscillators.cir
+.control
+* simulation control block
+run
+
+* plot input and output
+plot enable out out2 out3 out4 out5 out6 out7
+
+.endc
+.end

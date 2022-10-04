@@ -1,0 +1,13 @@
+*NAND gate
+.subckt nand va vb out mid vdd vss params: tplv=65n tpwv=130n tnln=65n tnwn=130n tpotv=1.95n tnotv=1.85n
+MP0 out va vdd vdd tp L={tplv} W={tpwv} AS=75.3f AD=75.3f PS=1.23u PD=1.23u
+MP1 out vb vdd vdd tp L={tplv} W={tpwv} AS=75.3f AD=75.3f PS=1.23u PD=1.23u
+MN0 out va mid vss tn L={tnln} W={tnwn} AS=75.3f AD=75.3f PS=1.12u PD=1.23u
+MN1 mid vb vss vss tn L={tnln} W={tnwn} AS=75.3f AD=75.3f PS=1.12u PD=1.23u
+
+* BSIM4 4.8.2 models
+* put here your .model statements from the previous question
+.model tp pmos level=54 version=4.8.2 TOXE=tpotv
+.model tn nmos level=54 version=4.8.2 TOXE=tnotv
+
+.ends nand
