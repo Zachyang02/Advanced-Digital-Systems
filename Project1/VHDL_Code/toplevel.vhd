@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use std.textio.all;
 
 library work;
 use work.project_pkg.all;
