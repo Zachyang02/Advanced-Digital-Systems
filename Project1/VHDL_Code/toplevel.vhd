@@ -5,7 +5,7 @@ library work;
 use work.project_pkg.all;
 
 entity ro_puf is
-end entity ro_puf is;
+end entity ro_puf;
 
 architecture reset of ro_puf is 
 begin
