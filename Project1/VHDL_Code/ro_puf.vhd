@@ -30,8 +30,8 @@ architecture puf of ro_puf is
 	signal clk: 	std_logic_vector(ro_count downto 0);
 	-- counter define, reset is active low, 16-bit counter
 	signal counters: counter_type;
-	-- counter output
-	signal counter_output:		std_logic_vector(ro_count downto 0);
+	-- challenge output
+	signal chal:		std_logic_vector(ro_count downto 0);
 	 
 begin
 	
@@ -52,18 +52,23 @@ begin
 		-- generating the counters for each ro:
 		Co: process(clk(stage))
 			begin
-			if(rising_edge(clk(stage))) then
-				if(reset='0') then
-					counters(stage) <= 0;
-				else
+			if reset = '0' then
+				counters(stage) <= 0;
+			elsif rising_edge(clk(stage)) then
+				if enable = '1' then
 					counters(stage) <= counters(stage) + 1;
+				else
+					counters(stage) <= counters(stage);
 				end if;
 			end if;
-			--counter_output(stage) <= counters;
 			end process;
 			
 	end generate ro_chain;
-	-- Check if num of ro is even, if odd then fail
-	--assert (ro_count AND (ro_count - 1)) = 0
-		--report "invalid power" severity error;
+	
+	-- counter array index for mux and comparision
+	
+	
+	-- Check if num of ro is power of 2, if odd then fail
+	assert (to_unsigned(ro_count, 4) AND to_unsigned(ro_count - 1, 4)) = 0
+		report "invalid power" severity error;
 end architecture puf;
