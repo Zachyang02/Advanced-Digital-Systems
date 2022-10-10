@@ -5,7 +5,7 @@ package project_pkg is
 	-- ring oscillator component
 	component ring_oscillator is
 		generic (
-			chain_size: positive := 14 - 1
+			chain_size: positive
 		);
 		port (
         enable:     in    std_logic;

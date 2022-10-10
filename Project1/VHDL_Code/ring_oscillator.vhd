@@ -3,8 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ring_oscillator is
     generic (
-        -- ring oscillator length parameter, change "14" to "N"/ chain_length later
-		  chain_size : positive := 14 - 1);
+        -- ring oscillator length parameter
+		  chain_size : positive := 14);
     port (
         enable:        in    std_logic;
         osc_out:    out    std_logic
