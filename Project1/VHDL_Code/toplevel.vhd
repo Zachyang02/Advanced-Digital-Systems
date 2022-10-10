@@ -5,21 +5,24 @@ library work;
 use work.project_pkg.all;
 
 entity ro_puf is
-begin
+end entity ro_puf is;
 
-process
-assert reset;
+architecture reset of ro_puf is 
+begin
+process is 
+    
+assert reset = --;
 
 --provide challenge to the ro_puf entity (still need this part of code)
 
 end process;
-end;
+end architecture;
 
 entity ro_puf is
 begin
 
 process
-assert enable;
+assert enable = --;
 wait for probe_delay µs; 
 
 
