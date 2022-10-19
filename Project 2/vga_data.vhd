@@ -63,17 +63,17 @@ package vga_data is
 				-- add data here
 				-- 800x600 @ 60Hz
 				-- clock 40 MHz
-					horizontal => (
-						active => 800,				-- active area in pixels
-						front_porch => 40,		-- in pixels
-						sync_width => 128,			-- in pixels
-						back_porch => 88			-- in pixels
+				horizontal => (
+						active => 800,
+						front_porch => 40,
+						sync_width => 128,
+						back_porch => 88
 					),
 				vertical => (
-						active => 600,				-- active area in lines
-						front_porch => 1,		-- in lines
-						sync_width => 4,			-- in lines
-						back_porch => 23			-- in lines
+						active => 600,
+						front_porch => 1,
+						sync_width => 4,
+						back_porch => 23
 					),
 				sync_polarity => active_high
 			)
@@ -82,8 +82,7 @@ package vga_data is
 	constant vga_res_1920x1080:	vga_timing := vga_res_data(0);
 	constant vga_res_640x480:	vga_timing := vga_res_data(1);
 	constant vga_res_800x600:	vga_timing := vga_res_data(2);	-- TODO: initialize
-	constant vga_res_default:	vga_timing := vga_res_data(1);	-- TODO: initialize to your
-												-- target resolution
+	constant vga_res_default:	vga_timing := vga_res_data(1);	-- TODO: initialize to your target resolution
 
 	---- TODO: some functions need to be implemented
 	-- return true if the x coordinate is on the visible area
@@ -201,6 +200,7 @@ package body vga_data is
 		) return boolean is
 	begin
 		-- TODO: implement
+		return point.y < vga_res.vertical.active;
 	end function y_visible;
 
 	function point_visible (
@@ -209,6 +209,7 @@ package body vga_data is
 		) return boolean is
 	begin
 		-- TODO: implement
+		return (point.x < vga_res.horizontal.active) AND (point.y < vga_res.vertical.active);
 	end function point_visible;
 
 	function make_coordinate (
@@ -231,9 +232,13 @@ package body vga_data is
 		ret.y := point.y;
 
 		-- TODO: add logic to increment y and reset y if needed
+		if ret.y = timing_range(vga_res, vertical) then
+			ret.y := 0;
+		end if;
 
 		if ret.x = timing_range(vga_res, horizontal) then
 			ret.x := 0;
+			ret.y := point.y + 1;
 		end if;
 
 
@@ -254,6 +259,7 @@ package body vga_data is
 		) return std_logic is
 	begin
 		-- TODO: implement
+		return do_sync(point, vga_res, vertical);
 	end function do_vertical_sync;
 
 end package body vga_data;
