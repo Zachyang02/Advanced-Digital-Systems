@@ -40,6 +40,7 @@ begin
 	
 	h_sync <= do_horizontal_sync(point_coord);
 	v_sync <= do_vertical_sync(point_coord);
-	
+	point <= point_coord;
+	point_valid <= point_visible(point_coord); 
 
 end architecture fsm;
