@@ -14,5 +14,22 @@ architecture mgen of Mandelbrot_gen is
 	 
 begin
 
+
+function algorithm1 (c	: ads_complex:
+				iterations	: natural )
+	return ads_complex is variable result; 
+
+		begin
+			 z <= 0;
+			iteration <= 0;
+			
+			while iteration < iterations loop 
+				z <= (z * z) + c ;
+					if abs2(z) > 2 then
+						exit;
+					end if;
+				 iteration <= iteration + 1;
+			end while;
+end function algorithm1;
 	 
 end architecture mgen;
