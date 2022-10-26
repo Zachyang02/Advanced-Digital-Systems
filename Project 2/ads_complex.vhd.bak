@@ -52,7 +52,6 @@ end package ads_complex_pkg;
 package body ads_complex_pkg is
 
 	-- function implementations
-	-- this is for "+"
 	function "+" (
 			l, r: ads_complex
 		) return ads_complex
@@ -63,54 +62,7 @@ package body ads_complex_pkg is
 		ret.im := l.im + r.im;
 		return ret;
 	end function "+";
-	
 
 	-- implement all other functions here
-	-- this is for "-"
-	function "-" (
-			l, r: ads_complex
-		) return ads_complex
-	is
-		variable ret: ads_complex;
-	begin
-		ret.re := l.re - r.re;
-		ret.im := l.im - r.im;
-		return ret;
-	end function "-";
-	
-	-- this is for "*"
-	function "*" (
-			l, r: ads_complex
-		) return ads_complex
-	is
-		variable ret: ads_complex;
-	begin
-		ret.re := l.re * r.re;
-		ret.im := l.im * r.im;
-		return ret;
-	end function "*";
-	
-	-- complex conjugate (unsure)
-	function conj (
-			arg: ads_complex
-		) return ads_complex
-	is
-		variable ret: ads_complex;
-	begin
-		-- conjugate is just the imaginary sign flip?
-		ret.im := -arg.im;
-		ret.re := arg.re;
-		return ret;
-	end function conj;
-	
-	-- absolute square (change this function later)
-		function abs2 (
-			arg: ads_complex
-		) return ads_sfixed
-	is
-		variable ret: ads_complex;
-	begin
-		return arg.re * arg.re + arg.im * arg.im;
-	end function abs2;
-	
+
 end package body ads_complex_pkg;
