@@ -32,6 +32,6 @@ out_stage <= in_stage when in_ou = '1' else stage_number;
 
 	
 	
-end function algorithm1;
+
 	 
 end architecture mgen;
