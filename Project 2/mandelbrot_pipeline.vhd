@@ -6,7 +6,7 @@ entity mandelbrot_pipeline is
 		stages_total: natural := 8;
 		threshold: ads_sfixed := to_ads_sfixed(2)
 	);
-	port map (
+	port (
 		clock:	in	std_logic;
 		reset:	in	std_logic;
 		seed:	in	ads_complex;
@@ -31,7 +31,7 @@ begin
 			port map (
 				in_z => in_z(stage),
 				-- other stuff
-				out_z => out_z(stage),
+				out_z => out_z(stage)
 				-- other stuff
 			);
 	end generate pipeline;
@@ -44,7 +44,7 @@ begin
 			-- the next stage
 			if rising_edge(clock) then
 				in_z(stage) <= out_z(stage - 1);
-				-- other signals
+				-- other signalso
 			end if;
 		end process stage_register;
 	end generate connection;
