@@ -36,10 +36,10 @@ architecture arch of toplevel is
 	
 	-- signals
   	signal point_bool: 	boolean;
-	signal clock_out: std_logic; -- not sure of signal type
+	signal clock_out: std_logic;
 	signal point_current: coordinate; 
 begin
-	-- output, incomplete right now
+	-- output
 	vfsm: vga_fsm
 		port map (
 			
