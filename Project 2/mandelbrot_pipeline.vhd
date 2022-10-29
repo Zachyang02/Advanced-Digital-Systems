@@ -4,6 +4,10 @@ use ieee.std_logic_1164.all;
 library work;
 use work.project_pkg.all;
 
+library ads;
+use ads.ads_fixed.all;
+use ads.ads_complex_pkg.all;
+
 entity mandelbrot_pipeline is
 	generic (
 		stages_total: natural := 8;
@@ -20,17 +24,19 @@ end entity mandelbrot_pipeline;
 
 architecture rtl of mandelbrot_pipeline is
 	type signal_z_type is array(0 to stages_total) of ads_complex;
+	type signal_stage_type is array(0 to stages_total) of natural;
+	
 	signal in_z: signal_z_type;
 	signal out_z: signal_z_type;
 	
 	-- add other types and signals here
 	signal in_c: signal_z_type;
-	signal in_ov: signal_z_type;
-	signal in_stage: signal_z_type;
+	signal in_ov: std_logic_vector(0 to stages_total);
+	signal in_stage: signal_stage_type;
 	
 	signal out_c: signal_z_type;
-	signal out_ov: signal_z_type;
-	signal out_stage: signal_z_type;
+	signal out_ov: std_logic_vector(0 to stages_total);
+	signal out_stage: signal_stage_type;
 	
 begin
 	-- create the pipeline stages

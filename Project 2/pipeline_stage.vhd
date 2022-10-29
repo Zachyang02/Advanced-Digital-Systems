@@ -38,7 +38,7 @@ begin
 	out_z.re <= z_re_squared - z_im_squared + in_c.re;
 	out_z.im <= in_c.im + to_ads_sfixed(to_signed(z_re_times_im) sll 1);
 
-	out_ov <= '1' when (in_ov = '1' or abs2(z) > to_ads_sfixed(2)) else '0';
+	out_ov <= '1' when ((in_ov = '1') or (z_re_squared + z_im_squared) > threshold) else '0';
 
 	out_c <= in_c;
 	out_stage <= in_stage when in_ov = '1' else stage_number;	
