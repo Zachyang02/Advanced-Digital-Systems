@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2_1
-Fri Oct 28 14:30:42 2022
+Sun Oct 30 19:02:53 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Oct 28 14:30:42 2022           ;
+; Analysis & Synthesis Status        ; Failed - Sun Oct 30 19:02:53 2022           ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; lab2_1                                      ;
 ; Top-level Entity Name              ; toplevel                                    ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Fri Oct 28 14:30:33 2022
+    Info: Processing started: Sun Oct 30 19:02:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2_1 -c lab2_1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -175,8 +175,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file pipelin
     Info (12022): Found design unit 1: pipeline_stage-mgen File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pipeline_stage.vhd Line: 28
     Info (12023): Found entity 1: pipeline_stage File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pipeline_stage.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file mandelbrot_pipeline.vhd
-    Info (12022): Found design unit 1: mandelbrot_pipeline-rtl File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Info (12023): Found entity 1: mandelbrot_pipeline File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 7
+    Info (12022): Found design unit 1: mandelbrot_pipeline-rtl File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 25
+    Info (12023): Found entity 1: mandelbrot_pipeline File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 11
 Info (12021): Found 2 design units, including 0 entities, in source file project_pkg.vhd
     Info (12022): Found design unit 1: project_pkg File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/project_pkg.vhd Line: 11
     Info (12022): Found design unit 2: project_pkg-body File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/project_pkg.vhd Line: 50
@@ -198,11 +198,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_ads_
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
     Info (12022): Found design unit 1: pll-SYN File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pll.vhd Line: 52
     Info (12023): Found entity 1: pll File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pll.vhd Line: 43
-Error (10476): VHDL error at pipeline_stage.vhd(41): type of identifier "z_re_times_im" does not agree with its usage as "ads_complex" type File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pipeline_stage.vhd Line: 41
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4789 megabytes
-    Error: Processing ended: Fri Oct 28 14:30:42 2022
-    Error: Elapsed time: 00:00:09
+Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Error (10495): VHDL Subprogram Declaration error at ads_complex.vhd(17): declaration of function or procedure "ads_cmplx" must have corresponding Subprogram Body File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_complex.vhd Line: 17
+Error (10657): VHDL Subprogram error at ads_complex.vhd(48):  failed to elaborate call to subprogram "ads_cmplx" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_complex.vhd Line: 48
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 4785 megabytes
+    Error: Processing ended: Sun Oct 30 19:02:53 2022
+    Error: Elapsed time: 00:00:08
     Error: Total CPU time (on all processors): 00:00:20
 
 

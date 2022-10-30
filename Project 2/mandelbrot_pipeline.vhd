@@ -78,12 +78,14 @@ begin
 	end generate connection;
 
 	-- drive the first stage:
-	in_z(0) <= ( re => ads_sfixed(0), im => ads_sfixed(0) );
+	in_z(0) <= ( re => to_ads_sfixed(0), im => to_ads_sfixed(0) );
 	in_c(0) <= seed;
 	-- add other signals
+	--in_ov(0) <= [overflow condition should be what represents a false on your design];
+	in_stage(0) <= 0;
 
 	-- drive the output
-	iteration <= out_stage(stage_total - 1);
+	iteration <= out_stage(stages_total - 1);
 
 end architecture rtl;
 
