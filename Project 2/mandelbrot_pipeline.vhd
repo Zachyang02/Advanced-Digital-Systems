@@ -81,7 +81,7 @@ begin
 	in_z(0) <= ( re => to_ads_sfixed(0), im => to_ads_sfixed(0) );
 	in_c(0) <= seed;
 	-- add other signals
-	--in_ov(0) <= [overflow condition should be what represents a false on your design];
+	in_ov(0) <= '0';
 	in_stage(0) <= 0;
 
 	-- drive the output

@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Failed - Sun Oct 30 19:02:53 2022
+Analysis & Synthesis Status : Successful - Sun Oct 30 20:38:42 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : lab2_1
-Top-level Entity Name : toplevel
+Top-level Entity Name : mandelbrot_pipeline
 Family : MAX 10
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
-UFM blocks : N/A until Partition Merge
-ADC blocks : N/A until Partition Merge
+Total logic elements : 12,511
+    Total combinational functions : 12,220
+    Dedicated logic registers : 600
+Total registers : 600
+Total pins : 91
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 48
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
