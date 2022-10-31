@@ -14,55 +14,62 @@ end entity mandelbrot_netpbm_generator;
 
 architecture test_fixture of mandelbrot_netpbm_generator is
 
-	-- your mandelbrot computational engine here
+	-- your mandelbrot computational engine here (EDIT NEEDED HERE)
+	-- update how the component entity is declared and instanced
 	component mandelbrot_pipeline is
 		generic (
 			iterations:	natural range 8 to 64		:= 32;
 			escape:		ads_sfixed	:= to_ads_sfixed(4)
 		);
 		port (
-			enable:				in	std_logic;
+			
 			clock:				in	std_logic;
 			reset:				in	std_logic;
 			seed:				in	ads_complex;
 	
 			iteration_count:	out	natural range 0 to iterations - 1;
-			output_valid:		out	boolean
+	
 		);
 	end component mandelbrot_pipeline;
-
+	-- update how the component entity is declared and instanced
+	-- (EDIT STOPS HERE)
+	
 
 	signal iteration_test: natural range 0 to iterations + 1;
 
 	signal seed: ads_complex;
 	signal clock: std_logic		:= '0';
 	signal reset: std_logic		:= '0';
-	signal enable: std_logic	:= '0';
-
+	
 	signal iteration_count: natural range 0 to iterations;
-	signal output_valid: boolean;
-
+	
 	signal finished: boolean	:= false;
 
 begin
 
 	clock <= not clock after 1 ps when not finished else '0';
-
+	
+	
+-- (EDITS START HERE)
+-- update how the component entity is declared and instanced
 	generator: mandelbrot_pipeline
 		generic map (
 			iterations => iterations,
 			escape => escape
 		)
 		port map (
-			enable => enable,
+			
 			clock => clock,
 			reset => reset,
 			seed => seed,
-
 			iteration_count => iteration_count,
-			output_valid => output_valid
+			
 		);
-	
+-- update how the component entity is declared and instanced
+--(EDITS END HERE)
+
+
+
 	make_pgm: process
 		variable x_coord: ads_sfixed;
 		variable y_coord: ads_sfixed;
@@ -82,17 +89,11 @@ begin
 
 		-- from here onwards, stimulus depends on your implementation
 
-		-- ensure generator is disabled
-		enable <= '0';
-
 		-- reset generator
 		wait until rising_edge(clock);
 		reset <= '1';
 		wait until rising_edge(clock);
 		reset <= '0';
-
-		-- enable the generator
-		enable <= '1';
 
 		-- iterate Y coordinates (rows)
 		for y_pt in 0 to y_steps-1 loop
@@ -111,22 +112,18 @@ begin
 				-- TODO: modify stimulus here depending on your core!
 				wait until rising_edge(clock);
 
-				-- in my pipeline, i have to wait until data goes through it
-				-- from the initial reset to get data out, after that, all
-				-- outputs are valid
+				-- Need Number of clock cycles since first put data into the pipeline
+				-- When # of clock cycles = # of Pipeline Stages
+				-- Pass the output is valid and start to print 
+				--(Edit Starts Here)
 				if output_valid then
 					write(output_line, integer'image(iterations - 1 - iteration_count));
 					writeline(output, output_line);
 					flush(output);
 				end if;
-				-- if you are doing the control unit method then you need to
-				-- clock until the done signal is asserted
-				-- while done = '0' loop
-				-- 	wait until rising_edge(clock);
-				-- end loop;
-				-- write(output_line, integer'image(iterations - 1 -
-				-- 				iteration_count));
-				-- writeline(output, output_line);
+				--(Edit END Here)
+				
+			
 			end loop;
 		end loop;
 
