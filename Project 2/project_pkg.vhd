@@ -26,6 +26,7 @@ package project_pkg is
 			v_sync:			out std_logic
 		);
 	end component vga_fsm;
+	
 	-- pipeline component
 	component pipeline_stage is
 		generic (
@@ -45,6 +46,22 @@ package project_pkg is
 				out_stage: out natural
     );
 	 end component pipeline_stage;
+	 
+	 -- mandelbrot component
+	component mandelbrot_pipeline is
+	generic (
+		stages_total: natural := 8;
+		threshold: ads_sfixed := to_ads_sfixed(2)
+	);
+	port (
+		clock:	in	std_logic;
+		reset:	in	std_logic;
+		seed:	in	ads_complex;
+
+		iteration:	out	natural
+	);
+	end component mandelbrot_pipeline;
+	
 end package;
 
 package body project_pkg is
