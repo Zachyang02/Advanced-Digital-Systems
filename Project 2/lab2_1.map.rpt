@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2_1
-Sun Oct 30 20:38:43 2022
+Mon Oct 31 19:17:57 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 30 20:38:42 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 31 19:17:57 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; lab2_1                                      ;
 ; Top-level Entity Name              ; mandelbrot_pipeline                         ;
@@ -274,11 +274,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
-; Maximum used               ; 12          ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -286,44 +286,43 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
 ;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
-;     Processor 7            ;   0.2%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.1%      ;
-;     Processors 9-12        ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; pipeline_stage.vhd               ; yes             ; User VHDL File               ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pipeline_stage.vhd      ;         ;
-; mandelbrot_pipeline.vhd          ; yes             ; User VHDL File               ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd ;         ;
-; project_pkg.vhd                  ; yes             ; User VHDL File               ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/project_pkg.vhd         ;         ;
-; vga_data.vhd                     ; yes             ; User VHDL File               ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/vga_data.vhd            ; vga     ;
-; ads_complex.vhd                  ; yes             ; User VHDL File               ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_complex.vhd         ; ads     ;
-; ads_fixed.vhd                    ; yes             ; User VHDL File               ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd           ; ads     ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf                          ;         ;
-; aglobal211.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                        ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.inc                       ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.inc                          ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                          ;         ;
-; db/mult_9hs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf         ;         ;
-; alt_mac_mult.tdf                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_mac_mult.tdf                      ;         ;
-; lpm_mult.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.inc                          ;         ;
-; db/mac_mult_0kg1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_mult_0kg1.tdf    ;         ;
-; db/mult_qqn.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_qqn.tdf         ;         ;
-; alt_mac_out.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_mac_out.tdf                       ;         ;
-; alt_zaccum.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_zaccum.inc                        ;         ;
-; db/mac_out_e682.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_out_e682.tdf     ;         ;
-; db/mac_mult_4fg1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_mult_4fg1.tdf    ;         ;
-; db/mult_1rn.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_1rn.tdf         ;         ;
-; db/mac_out_s682.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_out_s682.tdf     ;         ;
-; db/mac_mult_5fg1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_mult_5fg1.tdf    ;         ;
-; db/mult_2rn.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_2rn.tdf         ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; pipeline_stage.vhd               ; yes             ; User VHDL File               ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/pipeline_stage.vhd      ;         ;
+; mandelbrot_pipeline.vhd          ; yes             ; User VHDL File               ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd ;         ;
+; project_pkg.vhd                  ; yes             ; User VHDL File               ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/project_pkg.vhd         ;         ;
+; vga_data.vhd                     ; yes             ; User VHDL File               ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/vga_data.vhd            ; vga     ;
+; ads_complex.vhd                  ; yes             ; User VHDL File               ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_complex.vhd         ; ads     ;
+; ads_fixed.vhd                    ; yes             ; User VHDL File               ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd           ; ads     ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                        ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                      ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.inc                                                        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                        ;         ;
+; db/mult_9hs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf         ;         ;
+; alt_mac_mult.tdf                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_mac_mult.tdf                                                    ;         ;
+; lpm_mult.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.inc                                                        ;         ;
+; db/mac_mult_0kg1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_mult_0kg1.tdf    ;         ;
+; db/mult_qqn.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_qqn.tdf         ;         ;
+; alt_mac_out.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_mac_out.tdf                                                     ;         ;
+; alt_zaccum.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_zaccum.inc                                                      ;         ;
+; db/mac_out_e682.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_out_e682.tdf     ;         ;
+; db/mac_mult_4fg1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_mult_4fg1.tdf    ;         ;
+; db/mult_1rn.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_1rn.tdf         ;         ;
+; db/mac_out_s682.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_out_s682.tdf     ;         ;
+; db/mac_mult_5fg1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_mult_5fg1.tdf    ;         ;
+; db/mult_2rn.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_2rn.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -8442,7 +8441,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:21     ;
+; Top            ; 00:00:20     ;
 +----------------+--------------+
 
 
@@ -8452,69 +8451,72 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Oct 30 20:38:11 2022
+    Info: Processing started: Mon Oct 31 19:17:27 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2_1 -c lab2_1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file shift_register.vhd
+    Info (12022): Found design unit 1: shift_register-slicing File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/shift_register.vhd Line: 19
+    Info (12023): Found entity 1: shift_register File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/shift_register.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: toplevel-arch File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/toplevel.vhd Line: 27
-    Info (12023): Found entity 1: toplevel File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/toplevel.vhd Line: 10
+    Info (12022): Found design unit 1: toplevel-arch File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/toplevel.vhd Line: 27
+    Info (12023): Found entity 1: toplevel File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/toplevel.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_stage.vhd
-    Info (12022): Found design unit 1: pipeline_stage-mgen File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pipeline_stage.vhd Line: 28
-    Info (12023): Found entity 1: pipeline_stage File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pipeline_stage.vhd Line: 9
+    Info (12022): Found design unit 1: pipeline_stage-mgen File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/pipeline_stage.vhd Line: 28
+    Info (12023): Found entity 1: pipeline_stage File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/pipeline_stage.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file mandelbrot_pipeline.vhd
-    Info (12022): Found design unit 1: mandelbrot_pipeline-rtl File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 25
-    Info (12023): Found entity 1: mandelbrot_pipeline File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 11
+    Info (12022): Found design unit 1: mandelbrot_pipeline-rtl File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 25
+    Info (12023): Found entity 1: mandelbrot_pipeline File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 11
 Info (12021): Found 2 design units, including 0 entities, in source file project_pkg.vhd
-    Info (12022): Found design unit 1: project_pkg File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/project_pkg.vhd Line: 11
-    Info (12022): Found design unit 2: project_pkg-body File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/project_pkg.vhd Line: 50
+    Info (12022): Found design unit 1: project_pkg File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/project_pkg.vhd Line: 11
+    Info (12022): Found design unit 2: project_pkg-body File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/project_pkg.vhd Line: 67
 Info (12021): Found 2 design units, including 1 entities, in source file vga_fsm.vhd
-    Info (12022): Found design unit 1: vga_fsm-fsm File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/vga_fsm.vhd Line: 24
-    Info (12023): Found entity 1: vga_fsm File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/vga_fsm.vhd Line: 7
+    Info (12022): Found design unit 1: vga_fsm-fsm File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/vga_fsm.vhd Line: 24
+    Info (12023): Found entity 1: vga_fsm File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/vga_fsm.vhd Line: 7
 Info (12021): Found 2 design units, including 0 entities, in source file vga_data.vhd
-    Info (12022): Found design unit 1: vga_data (vga) File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/vga_data.vhd Line: 4
-    Info (12022): Found design unit 2: vga_data-body File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/vga_data.vhd Line: 132
+    Info (12022): Found design unit 1: vga_data (vga) File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/vga_data.vhd Line: 4
+    Info (12022): Found design unit 2: vga_data-body File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/vga_data.vhd Line: 132
 Info (12021): Found 2 design units, including 0 entities, in source file ads_complex.vhd
-    Info (12022): Found design unit 1: ads_complex_pkg (ads) File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_complex.vhd Line: 6
-    Info (12022): Found design unit 2: ads_complex_pkg-body File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_complex.vhd Line: 52
+    Info (12022): Found design unit 1: ads_complex_pkg (ads) File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_complex.vhd Line: 6
+    Info (12022): Found design unit 2: ads_complex_pkg-body File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_complex.vhd Line: 52
 Info (12021): Found 2 design units, including 0 entities, in source file ads_fixed.vhd
-    Info (12022): Found design unit 1: ads_fixed (ads) File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 7
-    Info (12022): Found design unit 2: ads_fixed-body File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 62
+    Info (12022): Found design unit 1: ads_fixed (ads) File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 7
+    Info (12022): Found design unit 2: ads_fixed-body File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 62
 Info (12021): Found 2 design units, including 1 entities, in source file tb_ads_fixed.vhd
-    Info (12022): Found design unit 1: tb_ads_sfixed-test_fixture File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/tb_ads_fixed.vhd Line: 10
-    Info (12023): Found entity 1: tb_ads_sfixed File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/tb_ads_fixed.vhd Line: 7
+    Info (12022): Found design unit 1: tb_ads_sfixed-test_fixture File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/tb_ads_fixed.vhd Line: 10
+    Info (12023): Found entity 1: tb_ads_sfixed File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/tb_ads_fixed.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-SYN File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pll.vhd Line: 52
-    Info (12023): Found entity 1: pll File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/pll.vhd Line: 43
+    Info (12022): Found design unit 1: pll-SYN File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/pll.vhd Line: 52
+    Info (12023): Found entity 1: pll File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/pll.vhd Line: 43
 Info (12127): Elaborating entity "mandelbrot_pipeline" for the top level hierarchy
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:0:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:1:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:2:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:3:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:4:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:5:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:6:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:7:s" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:0:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:1:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:2:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:3:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:4:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:5:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:6:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline_stage:\pipeline:7:s" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 44
 Info (278001): Inferred 17 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:6:s|Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:6:s|Mult0" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:5:s|Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:5:s|Mult0" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:5:s|Mult2" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:4:s|Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:4:s|Mult0" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:4:s|Mult2" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:3:s|Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:3:s|Mult0" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:3:s|Mult2" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:2:s|Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:2:s|Mult0" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:2:s|Mult2" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:1:s|Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:1:s|Mult0" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:1:s|Mult2" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
-Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1" with the following parameter: File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:6:s|Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:6:s|Mult0" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:5:s|Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:5:s|Mult0" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:5:s|Mult2" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:4:s|Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:4:s|Mult0" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:4:s|Mult2" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:3:s|Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:3:s|Mult0" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:3:s|Mult2" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:2:s|Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:2:s|Mult0" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:2:s|Mult2" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:1:s|Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:1:s|Mult0" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline_stage:\pipeline:1:s|Mult2" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
+Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1" with the following parameter: File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/ads_fixed.vhd Line: 328
     Info (12134): Parameter "LPM_WIDTHA" = "29"
     Info (12134): Parameter "LPM_WIDTHB" = "29"
     Info (12134): Parameter "LPM_WIDTHP" = "58"
@@ -8525,147 +8527,147 @@ Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:M
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_9hs.tdf
-    Info (12023): Found entity 1: mult_9hs File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 31
+    Info (12023): Found entity 1: mult_9hs File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 31
 Info (270001): Converted 44 DSP block slices
     Info (270002): Used 68 DSP blocks before DSP block balancing
         Info (270003): Used 68 DSP block slices in "Simple Multiplier (18-bit)" mode implemented in approximately 68 DSP blocks
     Info (270013): Converted the following 44 DSP block slices to logic elements
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 86
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:6:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:4:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_out6" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 86
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:3:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:2:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline_stage:\pipeline:1:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
     Info (270002): Used 24 DSP blocks after DSP block balancing
         Info (270003): Used 24 DSP block slices in "Simple Multiplier (18-bit)" mode implemented in approximately 24 DSP blocks
-Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
-Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" with the following parameter: File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 67
+Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
+Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" with the following parameter: File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 67
     Info (12134): Parameter "MULT_REPRESENTATION_A" = "SIGNED"
     Info (12134): Parameter "MULT_REPRESENTATION_B" = "SIGNED"
     Info (12134): Parameter "MULT_PIPELINE" = "0"
@@ -8687,11 +8689,11 @@ Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:M
     Info (12134): Parameter "signb_clear" = "NONE"
     Info (12134): Parameter "output_clear" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_0kg1.tdf
-    Info (12023): Found entity 1: mac_mult_0kg1 File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_mult_0kg1.tdf Line: 25
+    Info (12023): Found entity 1: mac_mult_0kg1 File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_mult_0kg1.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qqn.tdf
-    Info (12023): Found entity 1: mult_qqn File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_qqn.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
-Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8" with the following parameter: File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 91
+    Info (12023): Found entity 1: mult_qqn File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_qqn.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
+Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8" with the following parameter: File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 91
     Info (12134): Parameter "OPERATION_MODE" = "OUTPUT_ONLY"
     Info (12134): Parameter "dataa_width" = "22"
     Info (12134): Parameter "datab_width" = "0"
@@ -8725,9 +8727,9 @@ Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:M
     Info (12134): Parameter "addnsub1_pipeline_clear" = "NONE"
     Info (12134): Parameter "zeroacc_pipeline_clear" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mac_out_e682.tdf
-    Info (12023): Found entity 1: mac_out_e682 File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_out_e682.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult3" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
-Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult3" with the following parameter: File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 49
+    Info (12023): Found entity 1: mac_out_e682 File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_out_e682.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult3" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
+Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult3" with the following parameter: File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 49
     Info (12134): Parameter "MULT_REPRESENTATION_A" = "UNSIGNED"
     Info (12134): Parameter "MULT_REPRESENTATION_B" = "SIGNED"
     Info (12134): Parameter "MULT_PIPELINE" = "0"
@@ -8749,11 +8751,11 @@ Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:M
     Info (12134): Parameter "signb_clear" = "NONE"
     Info (12134): Parameter "output_clear" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_4fg1.tdf
-    Info (12023): Found entity 1: mac_mult_4fg1 File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_mult_4fg1.tdf Line: 25
+    Info (12023): Found entity 1: mac_mult_4fg1 File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_mult_4fg1.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_1rn.tdf
-    Info (12023): Found entity 1: mult_1rn File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_1rn.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out4" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
-Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out4" with the following parameter: File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 81
+    Info (12023): Found entity 1: mult_1rn File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_1rn.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out4" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
+Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out4" with the following parameter: File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 81
     Info (12134): Parameter "OPERATION_MODE" = "OUTPUT_ONLY"
     Info (12134): Parameter "dataa_width" = "29"
     Info (12134): Parameter "datab_width" = "0"
@@ -8787,9 +8789,9 @@ Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:M
     Info (12134): Parameter "addnsub1_pipeline_clear" = "NONE"
     Info (12134): Parameter "zeroacc_pipeline_clear" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mac_out_s682.tdf
-    Info (12023): Found entity 1: mac_out_s682 File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_out_s682.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult5" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
-Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult5" with the following parameter: File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_9hs.tdf Line: 58
+    Info (12023): Found entity 1: mac_out_s682 File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_out_s682.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult5" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
+Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult5" with the following parameter: File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_9hs.tdf Line: 58
     Info (12134): Parameter "MULT_REPRESENTATION_A" = "SIGNED"
     Info (12134): Parameter "MULT_REPRESENTATION_B" = "UNSIGNED"
     Info (12134): Parameter "MULT_PIPELINE" = "0"
@@ -8811,55 +8813,55 @@ Info (12133): Instantiated megafunction "pipeline_stage:\pipeline:6:s|lpm_mult:M
     Info (12134): Parameter "signb_clear" = "NONE"
     Info (12134): Parameter "output_clear" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mac_mult_5fg1.tdf
-    Info (12023): Found entity 1: mac_mult_5fg1 File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mac_mult_5fg1.tdf Line: 25
+    Info (12023): Found entity 1: mac_mult_5fg1 File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mac_mult_5fg1.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_2rn.tdf
-    Info (12023): Found entity 1: mult_2rn File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/db/mult_2rn.tdf Line: 29
+    Info (12023): Found entity 1: mult_2rn File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/db/mult_2rn.tdf Line: 29
 Info (13014): Ignored 17339 buffer(s)
     Info (13016): Ignored 440 CARRY_SUM buffer(s)
     Info (13019): Ignored 16899 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "iteration[3]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[4]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[5]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[6]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[7]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[8]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[9]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[10]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[11]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[12]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[13]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[14]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[15]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[16]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[17]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[18]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[19]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[20]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[21]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[22]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[23]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[24]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[25]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[26]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[27]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[28]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[29]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
-    Warning (13410): Pin "iteration[30]" is stuck at GND File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[3]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[4]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[5]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[6]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[7]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[8]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[9]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[10]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[11]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[12]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[13]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[14]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[15]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[16]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[17]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[18]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[19]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[20]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[21]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[22]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[23]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[24]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[25]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[26]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[27]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[28]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[29]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
+    Warning (13410): Pin "iteration[30]" is stuck at GND File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/Custom Pc/OneDrive - UMass Lowell/Desktop/quartus project 2/mandelbrot_pipeline.vhd Line: 18
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/Zachy/Downloads/Advanced-Digital-Systems-main (2)/Advanced-Digital-Systems-main/Project 2/mandelbrot_pipeline.vhd Line: 18
 Info (21057): Implemented 12650 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 60 input pins
     Info (21059): Implemented 31 output pins
     Info (21061): Implemented 12511 logic cells
     Info (21062): Implemented 48 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4965 megabytes
-    Info: Processing ended: Sun Oct 30 20:38:43 2022
-    Info: Elapsed time: 00:00:32
+    Info: Peak virtual memory: 4934 megabytes
+    Info: Processing ended: Mon Oct 31 19:17:57 2022
+    Info: Elapsed time: 00:00:30
     Info: Total CPU time (on all processors): 00:00:43
 
 

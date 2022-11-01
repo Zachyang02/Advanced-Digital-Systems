@@ -18,7 +18,7 @@ entity mandelbrot_pipeline is
 		reset:	in	std_logic;
 		seed:	in	ads_complex;
 
-		iteration:	out	natural
+		iteration_count:	out	natural
 	);
 end entity mandelbrot_pipeline;
 
@@ -68,11 +68,18 @@ begin
 			-- the output of the previous stage goes into
 			-- the next stage
 			if rising_edge(clock) then
-				in_z(stage) <= out_z(stage - 1);
-				-- other signals
-				in_c(stage) <= out_c(stage - 1);
-				in_ov(stage) <= out_ov(stage - 1);
-				in_stage(stage) <= out_stage(stage - 1);
+				if reset = '0' then
+					in_z(stage) <= complex_zero;
+					in_c(stage) <= complex_zero;
+					in_ov(stage) <= '0';
+					in_stage(stage) <= 0;
+				else
+					in_z(stage) <= out_z(stage - 1);
+					-- other signals
+					in_c(stage) <= out_c(stage - 1);
+					in_ov(stage) <= out_ov(stage - 1);
+					in_stage(stage) <= out_stage(stage - 1);
+				end if;
 			end if;
 		end process stage_register;
 	end generate connection;
@@ -85,7 +92,7 @@ begin
 	in_stage(0) <= 0;
 
 	-- drive the output
-	iteration <= out_stage(stages_total - 1);
+	iteration_count <= out_stage(stages_total - 1);
 
 end architecture rtl;
 

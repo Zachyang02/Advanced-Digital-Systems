@@ -10,10 +10,6 @@ use ads.ads_fixed.all;
 use work.netpbm_config.all;
 
 entity mandelbrot_netpbm_generator is
-	generic (
-		stages_total: natural := 32;
-		threshold: ads_sfixed := to_ads_sfixed(4)
-	);
 end entity mandelbrot_netpbm_generator;
 
 architecture test_fixture of mandelbrot_netpbm_generator is
@@ -22,8 +18,8 @@ architecture test_fixture of mandelbrot_netpbm_generator is
 	-- update how the component entity is declared and instanced
 	component mandelbrot_pipeline is
 		generic (
-			stages_total:	natural range 8 to 64		:= 32;
-			threshold:		ads_sfixed	:= to_ads_sfixed(4)
+			iterations:	natural range 8 to 64		:= 32;
+			escape:		ads_sfixed	:= to_ads_sfixed(4)
 		);
 		port (
 			
@@ -31,7 +27,7 @@ architecture test_fixture of mandelbrot_netpbm_generator is
 			reset:				in	std_logic;
 			seed:				in	ads_complex;
 	
-			iteration_count:	out	natural range 0 to stages_total - 1
+			iteration_count:	out	natural range 0 to iterations - 1;
 	
 		);
 	end component mandelbrot_pipeline;
@@ -58,15 +54,15 @@ begin
 -- update how the component entity is declared and instanced
 	generator: mandelbrot_pipeline
 		generic map (
-			stages_total => stages_total,
-			threshold => threshold
+			iterations => iterations,
+			escape => escape
 		)
 		port map (
 			
 			clock => clock,
 			reset => reset,
 			seed => seed,
-			iteration_count => iteration_count
+			iteration_count => iteration_count,
 			
 		);
 -- update how the component entity is declared and instanced
@@ -88,30 +84,30 @@ begin
 				& integer'image(y_steps));
 		writeline(output, output_line);
 		---- maximum value
-		write(output_line, integer'image(stages_total - 1));
+		write(output_line, integer'image(iterations - 1));
 		writeline(output, output_line);
 
 		-- from here onwards, stimulus depends on your implementation
 
 		-- reset generator
 		wait until rising_edge(clock);
-		reset <= '0';
-		wait until rising_edge(clock);
 		reset <= '1';
+		wait until rising_edge(clock);
+		reset <= '0';
 
 		-- iterate Y coordinates (rows)
 		for y_pt in 0 to y_steps-1 loop
 			-- imaginary portion computation
-			y_coord := to_ads_sfixed(y_range.min) + to_ads_sfixed(y_pt) * dy;
+			y_coord := ads_sfixed(y_range.min) + ads_sfixed(y_pt) * dy;
 
 			-- iterate X coordinates (columns)
 			for x_pt in 0 to x_steps-1 loop
 
 				-- real portion computation
-				x_coord := to_ads_sfixed(x_range.min) + to_ads_sfixed(x_pt) * dx;
+				x_coord := ads_sfixed(x_range.min) + ads_sfixed(x_pt) * dx;
 
 				-- set seed
-				seed <= (re => x_coord, im => y_coord);
+				seed <= ads_cplx(x_coord, y_coord);
 
 				-- TODO: modify stimulus here depending on your core!
 				wait until rising_edge(clock);
@@ -120,23 +116,22 @@ begin
 				-- When # of clock cycles = # of Pipeline Stages
 				-- Pass the output is valid and start to print 
 				--(Edit Starts Here)
-				-- TODO: actually truncate the output
-				--if output_valid then
-				--	write(output_line, integer'image(stages_total - 1 - iteration_count));
-				--	writeline(output, output_line);
-				--	flush(output);
-				--end if;
+				if output_valid then
+					write(output_line, integer'image(iterations - 1 - iteration_count));
+					writeline(output, output_line);
+					flush(output);
+				end if;
 				--(Edit END Here)
 				
 			
 			end loop;
 		end loop;
 
-		for i in 0 to stages_total - 1 loop
+		for i in 0 to iterations - 1 loop
 			wait until rising_edge(clock);
-			write(output_line, integer'image(stages_total - 1 - iteration_count));
+			write(output_line, integer'image(iterations - 1 - iteration_count));
 			writeline(output, output_line);
-			-- flush(output);
+			flush(output);
 		end loop;
 
 		-- all done

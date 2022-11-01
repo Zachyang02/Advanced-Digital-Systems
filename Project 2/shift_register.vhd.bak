@@ -11,7 +11,7 @@ entity shift_register is
 				rst: in std_logic;
 				
 				sr_in: in std_logic;
-				sr_out: out std_logic);
+				sr_out: in std_logic);
 end;
 
 

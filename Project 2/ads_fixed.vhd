@@ -151,12 +151,12 @@ package body ads_fixed is
 		variable ret: ads_sfixed;
 	begin
 		if (arg >= 2.0 ** msb) then
-			report "to_ads_sfixed(real) overflow, saturating"
-					severity warning;
+			--report "to_ads_sfixed(real) overflow, saturating"
+			--		severity warning;
 			return ads_maximum_value;
 		elsif (arg < -(2.00 ** msb)) then
-			report "to_ads_sfixed(real) underflow, saturating"
-					severity warning;
+			--report "to_ads_sfixed(real) underflow, saturating"
+					--severity warning;
 			return ads_minimum_value;
 		else
 			partial_result := abs(arg);
@@ -227,11 +227,11 @@ package body ads_fixed is
 					and msb_ex_l and msb_ex_r) = '1';
 
 		if overflow then
-			report "saturating addition overflow" severity warning;
-			result := maximum_value;
+			--report "saturating addition overflow" severity warning;
+			--result := maximum_value;
 		elsif underflow then
-			report "saturating addition underflow" severity warning;
-			result := minimum_value;
+			--report "saturating addition underflow" severity warning;
+			--result := minimum_value;
 		end if;
 
 		for i in ret'range loop
@@ -276,11 +276,11 @@ package body ads_fixed is
 						and (not msb_result)) = '1';
 
 		if overflow then
-			report "saturating subtraction overflow" severity warning;
-			result := maximum_value;
+			--report "saturating subtraction overflow" severity warning;
+			--result := maximum_value;
 		elsif underflow then
-			report "saturating subtraction underflow" severity warning;
-			result := minimum_value;
+			--report "saturating subtraction underflow" severity warning;
+			--result := minimum_value;
 		end if;
 
 		for i in ret'range loop
@@ -341,11 +341,11 @@ package body ads_fixed is
 				and (unary_and(extended_result_upper) = '0');
 
 		if overflow then
-			report "saturating multiplication overflow" severity warning;
-			return to_ads_sfixed(maximum_value);
+			--report "saturating multiplication overflow" severity warning;
+			--return to_ads_sfixed(maximum_value);
 		elsif underflow then
-			report "saturating multiplication underflow" severity warning;
-			return to_ads_sfixed(minimum_value);
+			--report "saturating multiplication underflow" severity warning;
+			--return to_ads_sfixed(minimum_value);
 		end if;
 
 		for i in ret'range loop
