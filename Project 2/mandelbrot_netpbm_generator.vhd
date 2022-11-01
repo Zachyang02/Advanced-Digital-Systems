@@ -41,7 +41,7 @@ architecture test_fixture of mandelbrot_netpbm_generator is
 
 	signal iteration_test: natural range 0 to iterations + 1;
 
-	signal seed: ads_complex;
+	signal seed: ads_complex := complex_zero;
 	signal clock: std_logic		:= '0';
 	signal reset: std_logic		:= '0';
 	
@@ -116,6 +116,9 @@ begin
 				-- TODO: modify stimulus here depending on your core!
 				wait until rising_edge(clock);
 
+				write(output_line, integer'image(iterations -
+						iteration_count-1));
+				writeline(output, output_line);
 				-- Need Number of clock cycles since first put data into the pipeline
 				-- When # of clock cycles = # of Pipeline Stages
 				-- Pass the output is valid and start to print 
@@ -124,7 +127,7 @@ begin
 				--if output_valid then
 				--	write(output_line, integer'image(stages_total - 1 - iteration_count));
 				--	writeline(output, output_line);
-				--	flush(output);
+				-- flush(output);
 				--end if;
 				--(Edit END Here)
 				

@@ -13,8 +13,8 @@ entity pipeline_stage is
 	);
 
     port (		
-			in_z: in ads_complex;
-			in_c: in ads_complex;
+			in_z: in ads_complex := complex_zero;
+			in_c: in ads_complex := complex_zero;
 			in_ov: in std_logic;
 			in_stage: in natural;
 			
@@ -26,9 +26,9 @@ entity pipeline_stage is
 end entity pipeline_stage ;
 
 architecture mgen of pipeline_stage is
-	signal z_re_squared: ads_sfixed;
-	signal z_im_squared: ads_sfixed;
-	signal z_re_times_im: ads_sfixed;
+	signal z_re_squared: ads_sfixed := to_ads_sfixed(0);
+	signal z_im_squared: ads_sfixed := to_ads_sfixed(0);
+	signal z_re_times_im: ads_sfixed := to_ads_sfixed(0);
 
 begin
 	z_re_squared <= in_z.re * in_z.re;
