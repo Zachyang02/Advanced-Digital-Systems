@@ -27,8 +27,8 @@ package netpbm_config is
 			max =>  1.2
 		);
 
-	constant y_steps: natural range 10 to natural'high := 100;
-	constant x_steps: natural range 10 to natural'high := 100;
+	constant y_steps: natural range 10 to natural'high := 500;
+	constant x_steps: natural range 10 to natural'high := 500;
 
 	-- other stuff
 	constant dy: ads_sfixed := to_ads_sfixed((y_range.max - y_range.min)

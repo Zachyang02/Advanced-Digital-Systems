@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Tue Nov  1 13:45:10 2022
+Analysis & Synthesis Status : Successful - Wed Nov  2 18:12:45 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : lab2_1
-Top-level Entity Name : mandelbrot_pipeline
+Top-level Entity Name : toplevel
 Family : MAX 10
-Total logic elements : 9,850
-    Total combinational functions : 9,849
-    Dedicated logic registers : 596
-Total registers : 596
-Total pins : 91
+Total logic elements : 30,821
+    Total combinational functions : 30,818
+    Dedicated logic registers : 2,606
+Total registers : 2606
+Total pins : 16
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 48
-Total PLLs : 0
+Total memory bits : 69
+Embedded Multiplier 9-bit elements : 288
+Total PLLs : 1
 UFM blocks : 0
 ADC blocks : 0
