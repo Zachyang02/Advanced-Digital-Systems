@@ -1,0 +1,18 @@
+v 4
+file . "ads_fixed.vhd" "0661ab73b36f03041bfc122c97d8122921983b78" "20221101003701.910":
+  package ads_fixed at 3( 43) + 0 on 30 body;
+  package body ads_fixed at 62( 1223) + 0 on 31;
+file . "mandelbrot_netpbm_generator.vhd" "88803a92a9aebbfe0ee41c4e7b0a3303127a7d06" "20221102192359.020":
+  entity mandelbrot_netpbm_generator at 1( 0) + 0 on 44;
+  architecture test_fixture of mandelbrot_netpbm_generator at 19( 329) + 0 on 45;
+file . "mandelbrot_pipeline.vhd" "863c08cb6376a0c55b7c1aed0e8b6bd9d20bde20" "20221101003756.185":
+  entity mandelbrot_pipeline at 1( 0) + 0 on 34;
+  architecture rtl of mandelbrot_pipeline at 25( 441) + 0 on 35;
+file . "pipeline_stage.vhd" "8064abfb7aa7dc6b63b79e30ddea9a544c58d0ba" "20221101003837.471":
+  entity pipeline_stage at 1( 0) + 0 on 39;
+  architecture mgen of pipeline_stage at 28( 536) + 0 on 40;
+file . "project_pkg.vhd" "c96db951eb31a8257d824b30abfe77bbbb17a793" "20221101003747.780":
+  package project_pkg at 1( 0) + 0 on 32;
+  package body project_pkg at 67( 1306) + 0 on 33;
+file . "netpbm_config.vhd" "2c6c0ca606a2d70d8d6061a71dbec7b57626bf30" "20221102192350.174":
+  package netpbm_config at 1( 0) + 0 on 43;

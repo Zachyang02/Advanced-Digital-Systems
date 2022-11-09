@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue Nov  8 14:48:04 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : lab2_1
+Top-level Entity Name : toplevel
+Family : MAX 10
+Total logic elements : 46,144
+    Total combinational functions : 46,142
+    Dedicated logic registers : 2,948
+Total registers : 2948
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 81
+Embedded Multiplier 9-bit elements : 288
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0

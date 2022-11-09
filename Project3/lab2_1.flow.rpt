@@ -1,0 +1,127 @@
+Flow report for lab2_1
+Tue Nov  8 14:53:48 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue Nov  8 14:53:48 2022       ;
+; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                      ; lab2_1                                      ;
+; Top-level Entity Name              ; toplevel                                    ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 47,713 / 49,760 ( 96 % )                    ;
+;     Total combinational functions  ; 47,388 / 49,760 ( 95 % )                    ;
+;     Dedicated logic registers      ; 2,773 / 49,760 ( 6 % )                      ;
+; Total registers                    ; 2773                                        ;
+; Total pins                         ; 16 / 360 ( 4 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 81 / 1,677,312 ( < 1 % )                    ;
+; Embedded Multiplier 9-bit elements ; 288 / 288 ( 100 % )                         ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/08/2022 14:46:08 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab2_1              ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 57487821628874.166793676718872         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll_inst.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll.cmp                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll.ppf                                ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; toplevel                               ; lab2_1        ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:53     ; 1.0                     ; 5254 MB             ; 00:02:04                           ;
+; Fitter               ; 00:05:19     ; 1.5                     ; 6104 MB             ; 00:11:13                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4873 MB             ; 00:00:05                           ;
+; Total                ; 00:07:17     ; --                      ; --                  ; 00:13:22                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-87J1V6D  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-87J1V6D  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-87J1V6D  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab2_1 -c lab2_1
+quartus_fit --read_settings_files=on --write_settings_files=off lab2_1 -c lab2_1
+quartus_asm --read_settings_files=off --write_settings_files=off lab2_1 -c lab2_1
+
+
+
