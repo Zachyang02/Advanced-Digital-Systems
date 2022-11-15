@@ -17,6 +17,7 @@ entity toplevel is
 	port (		
 		reset:		in	std_logic;
 		clock:		in	std_logic;
+		pause:		in	std_logic;
 		
 		v_sync_out:		out	std_logic;
 		h_sync_out:		out	std_logic;
@@ -109,19 +110,47 @@ architecture arch of toplevel is
 		);
 		
 	signal seed_index: seed_index_type;
-		
+	signal c_seed: ads_complex := seed_rom(0);
+	
+	signal pause_in: std_logic_vector(2 downto 0);
+	signal do_pause: boolean;
+	
 begin
+	
+	--  pause controller
+	pause_ctl: process (clock) is
+	begin
+		if rising_edge(clock) then
+			if reset = '0' then
+				do_pause <= false;
+				pause_in <= (others => '0');
+			else
+				pause_in <= pause_in(1 downto 0) & pause;
+				if ((pause_in(2)) and (not pause_in(1))) = '1' then
+					do_pause <= not do_pause;
+				end if;
+			end if;
+		end if;
+	end process pause_ctl;
+
 	-- seed selection
 	seed_select: process (clock) is
 	begin
 		if rising_edge(clock) then
 			if reset = '0' then
 				seed_index <= 0;
-			elsif is_at_end_of_frame(point_current) then 
+			elsif is_at_end_of_frame(point_current) and (not do_pause) then 
 				seed_index <= get_next_seed_index(seed_index);
 			end if;
 		end if;
 	end process seed_select;
+	
+	c_seed_input: process (clock) is
+	begin
+		if rising_edge(clock) then
+			c_seed <= seed_rom(seed_index);
+		end if;
+	end process c_seed_input;
 
 	-- sync signals
 	sr0: shift_register
@@ -197,7 +226,7 @@ begin
 			clock => clock_out,
 			reset => reset,
 			z_seed => seed,
-			c_seed => seed_rom(seed_index),
+			c_seed => c_seed,
 			iteration_count => iteration_count
 			
 	);
