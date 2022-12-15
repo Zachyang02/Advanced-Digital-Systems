@@ -1,0 +1,61 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity seven_segment_agent is
+generic(	lamp_mode:			lamp_configuration := default_lamp_configuration;
+			decimal_Support:	boolean := true;
+			implementer:		natural range 1 to 255 := 255;
+			revision:			natural	range 0 to 255 := 0
+			);
+
+port(		clk:			in		std_logic;
+			reset_n:		in		std_logic;
+			address:		in		std_logic_vector(1 downto 0);
+			read:			in		std_logic;
+			readdata:	out	std_logic_vector(31 downto 0);
+			write:		in		std_logic;
+			writedata:	in		std_logic_vector(31 downto 0);
+			lamps			out	std_logic_vector(41 downto 0)
+			);
+
+end entity seven_segment_agent;
+
+
+architecture rtl of seven_segment_agent is
+signal data:		std_logic_vector(31 downto 0);
+signal control:	std_logic_vector(31 downto 0);
+
+
+function seven_segment_agent_fn ( arr:	seven_segement_config)
+		return std_logic_vector is
+		variable concatenated_result:	std_logic_vector(41 downto 0);
+		begin
+	
+		 concatenated_result <= arr.g & arr.f & arr.e & arr.d & arr.c & arr.b & arr.a;
+		
+			return concatenated_result;
+		end function;
+
+begin
+
+	process(clk) is
+	begin
+		if rising_edge(clk) then
+			if reset = '1' then
+				data <= (others => '0');
+				control <= (others => '0');
+			end if;
+		end if;
+		
+		case address is
+			when "00" => --finish 
+			when "01" => --finish
+			when "10" => --finish
+			when "11" => --finish
+		
+		end case;
+				
+			
+			
+end architecture rtl;

@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+use work.seven_segment_pkg.all;
+
+entity seven_segment_agent_wrapper is
+generic(	lamp_mode_common_anode:		boolean := true;
+			decimal_support:	boolean := true;
+			implementer:		natural range 1 to 255 := 255;
+			revision:			natural range 0 to 255 := 0
+			);
+
+port(		clk:			in		std_logic;
+			reset_n:		in		std_logic;
+			address:		in		std_logic_vector(1 downto 0);
+			read:			in		std_logic;
+			readdata:	out	std_logic_vector(31 downto 0);
+			write:		in		std_logic;
+			writedata:	in		std_logic_vector(31 downto 0);
+			lamps:			out	std_logic_vector(41 downto 0)
+			);
+
+end entity seven_segment_agent_wrapper;
+
+architecture wrapper of seven_segment_agent_wrapper is
+	function get_lamp_mode
+		return lamp_configuration
+	is
+	begin
+		if lamp_mode_common_anode then
+			return common_anode;
+		end if;
+		return common_cathode;
+	end function get_lamp_mode;
+
+	component seven_segment_agent is
+		generic(
+			lamp_mode:			lamp_configuration := common_anode;
+				decimal_support:	boolean := true;
+				implementer:		natural range 1 to 255 := 255;
+				revision:			natural	range 0 to 255 := 0
+			);
+
+		port(
+			clk:			in		std_logic;
+			reset_n:		in		std_logic;
+			address:		in		std_logic_vector(1 downto 0);
+			read:			in		std_logic;
+			readdata:	out	std_logic_vector(31 downto 0);
+			write:		in		std_logic;
+			writedata:	in		std_logic_vector(31 downto 0);
+			lamps:			out	std_logic_vector(41 downto 0)
+		);
+	end component seven_segment_agent;
+	
+begin
+	
+	instance: seven_segment_agent
+		generic map (
+			lamp_mode 		 => get_lamp_mode,
+			decimal_support => decimal_support,
+			implementer		 => implementer,
+			revision			 => revision
+		)
+		port map (
+			clk			=>	clk,
+			reset_n		=> reset_n,
+			address		=>	address,
+			read			=>	read,
+			readdata		=>	readdata,
+			write			=>	write,
+			writedata 	=>	writedata,
+			lamps			=>	lamps
+		);
+		
+end architecture wrapper;
